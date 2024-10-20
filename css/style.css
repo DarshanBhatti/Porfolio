@@ -36,6 +36,8 @@ header {
 .nav-links {
   display: flex;
   gap: 2rem;
+  align-items: center;
+  justify-content: center;
 }
 li a {
   position: relative;
@@ -57,7 +59,7 @@ li a:hover::before {
   width: 100%;
 }
 .visit-btn {
-  padding: 1rem 2rem;
+  padding: 0.8rem 2rem;
   text-wrap: nowrap;
   border: none;
   outline: none;
@@ -187,6 +189,9 @@ li a:hover::before {
 [data-theme="dark"] header .visit-btn::before {
   color: #ffffff; /* White text */
 }
+[data-theme="dark"] header .nav-links {
+  background-color: #ffffff; 
+}
 
 /* Include more theme-specific styles if needed */
 [data-theme="dark"] .btn {
@@ -229,11 +234,6 @@ li a:hover::before {
 [data-theme="dark"] footer li a{
     color: white;
 }
-
-
-
-
-
 
 /* menu icon */
 #menu-icons {
@@ -497,15 +497,44 @@ footer ul li a {
 }
 
 @media (max-width: 768px) {
+  header #menu-icons {
+    display: block;
+  }
+  .nav-links{
+    position: absolute;
+    top: 100%;
+    margin-top: 1rem;
+    width: 80%;
+    padding: 1rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: top;
+    background: #333;
+    border-radius: 3rem;
+    display: none;
+  }
+  .nav-links li {
+    padding: 1rem;
+  }
+  .nav-links div {
+    padding: 1rem;
+  }
+  .nav-links .visit-btn {
+    padding: 1rem 3rem;
+  }
+  .nav-links .theme-switch {
+    width: 20%;
+  }
+  .nav-links.active {
+    display: block;
+  }
   header {
-    gap: 1rem;
-    padding: 1rem 1rem;
+    gap: 8rem;
+    padding: 1.5rem 5rem;
   }
   header .logo {
-    font-size: 1rem;
-  }
-  header .visit-btn {
-    display: none;
+    font-size: 1.5rem;
   }
   .input-box input {
     padding: 1rem 2rem;
@@ -526,30 +555,7 @@ footer ul li a {
 }
 
 @media (max-width: 600px) {
-  header #menu-icons {
-    display: block;
-  }
-  .nav-links {
-    position: absolute;
-    top: 100%;
-    margin-top: 1rem;
-    width: 100%;
-    padding: 1rem;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.9);
-    border-radius: 3rem;
-    display: none;
-  }
-  .nav-links li {
-    margin-top: 1.5rem;
-    padding: 1rem;
-  }
-  .nav-links.active {
-    display: block;
-  }
+ 
   header {
     padding: 1rem 5rem;
     gap: 8rem;
