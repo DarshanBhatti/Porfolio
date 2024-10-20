@@ -1,9 +1,20 @@
-const menuIcons = document.querySelector("#menu-icons");
+const menuIcon = document.querySelector("#menu-icons");
 const navLinks = document.querySelector(".nav-links");
 
-menuIcons.onclick = () => {
+// Toggle the 'active' class on navLinks when the menuIcon is clicked
+menuIcon.onclick = () => {
     navLinks.classList.toggle('active');
 };
+
+// Close navbar when a link is clicked
+const navLinkItems = document.querySelectorAll(".nav-links a");
+
+navLinkItems.forEach((link) => link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+}));
+
+
+
 
 
 const toggleSwitch = document.querySelector('#switch');
