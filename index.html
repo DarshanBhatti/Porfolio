@@ -9,7 +9,9 @@
 </head>
 <body>
     <header class="header">
+
         <a href="#" class="logo">Darshan Bhatti</a>
+        
         <ul class="nav-links">
             <li>
                 <a href="#about">About</a>
@@ -23,20 +25,19 @@
             <li>
                 <a href="#contact">Contact</a>
             </li>
-        </ul>
-
+            
+            <div>
+                <button class="visit-btn" onclick="downloadResume()">Resume</button>
+            </div>
+            <div class="theme-switch">
+                <input type="checkbox" id="switch" />
+                <label class="toggle-icons" for="switch">
+                  <img class="moon" src="img/moon.svg" alt="moon icon" />
+                  <img class="sun" src="img/sun.svg" alt="sun icon" />
+                </label>
+            </div>
+        </ul>     
         <i class="fa-solid fa-bars" id="menu-icons"></i>
-
-        <button class="visit-btn" onclick="downloadResume()">Resume <i class="fas fa-arrow-right"></i></button>
-
-        <!-- Toggle switch -->
-        <!-- Toggle switch -->
-        <input type="checkbox" id="switch" />
-        <label class="toggle-icons" for="switch">
-          <img class="moon" src="img/moon.svg" alt="moon icon" />
-          <img class="sun" src="img/sun.svg" alt="sun icon" />
-        </label>
-
     </header>
     
     <section id="about" class="about">
